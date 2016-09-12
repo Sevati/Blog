@@ -1,0 +1,38 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "node.js + express.js +  mysql ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9958/NEMBlog.git"
+  },
+  "author": "rin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/9958/NEMBlog/issues"
+  },
+  "homepage": "https://github.com/9958/NEMBlog#readme",
+  "dependencies": {
+    "akismet": "0.0.13",
+    "async": "^1.5.2",
+    "body-parser": "^1.13.3",
+    "colors": "^1.1.2",
+    "compression": "^1.6.1",
+    "cookie-parser": "^1.3.5",
+    "debug": "^2.2.0",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.11.3",
+    "lodash": "^3.10.1",
+    "marked": "^0.3.5",
+    "moment": "^2.10.6",
+    "multer": "^1.0.3",
+    "mysql": "^2.8.0",
+    "sequelize": "^3.5.1"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <title>管理中心</title>
+  <link rel="stylesheet" href="/admin/assets/style.css">
+  <script src="/libs/jquery/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="nav">
+    <ul>
+      <li><a href="/admin">首页</a><span> ›</span></li>
+      <li><a href="/admin/post">日志首页</a></li>
+    </ul>
+    <div class="quick"><a href="/admin/post/write" title="Write Post"><span>写博客</span></a></div>
+  </div>
+  <div id="post-list">
+    <ul>
+      <% post_list.forEach(function(item){ %>
+      <li>
+        <%if(item.status==0){%>[草稿]<%}%><a href='/admin/post/edit/<%=item.id%>'><%=item.title%></a>
+
+        <div class='action'>
+              <span class='edit'>
+                <a href='/post/<%=item.id%>' target='_blank'>查看</a>
+                <a href='/admin/post/delete/<%=item.id%>'>删除</a>
+              </span>
+        </div>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+  <div id='clearfix'></div>
+</div>
+</body>
+</html>

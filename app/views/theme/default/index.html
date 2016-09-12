@@ -1,0 +1,56 @@
+<section id="main" class="container">
+  <section class="posts block">
+
+ 
+    <%posts.forEach(function(item,index){%>
+    <article class="post <% if(index<(posts.length-1)){ %>block <%}%>">
+      <h2 class="title">
+          <a href="<%=site_url%>/post/<% if(item.slug){%><%=item.slug%><%}else{%><%=item.id%><%}%>" title="<%=item.title%>"><%=item.title%></a>
+      </h2>
+
+      <div class="meta">
+        <time><%=item.addtime%></time>
+      </div>
+      <div class="entry"><%-item.content%></div>
+    </article>
+    <%})%>
+  </section>
+  <div id="navigation">
+    <table width='100%'>
+      <tbody>
+      <tr>
+        <td width='120' align='left'>
+          <%if(crtP>1){%>
+          <div class="alignleft">
+            <a href="<%=site_url%>/p/<%=(crtP - 1)%>">上一页</a>
+          </div>
+          <%}%>
+        </td>
+        <td width='auto' align='center'>
+          <strong class="fade">
+            <%=crtP%>/<%=maxP%>
+          </strong>
+        </td>
+        <td width='120' align='right'>
+          <%if(nextP>crtP){%>
+          <div class="alignright">
+            <a href="<%=site_url%>/p/<%=nextP%>">下一页</a>
+          </div>
+          <%}%>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+    
+    <div class="sidebar">
+        <% include ./public/right.html %>
+	<% include ./public/ad2.html %>
+	<% include ./public/hotpost.html %>
+	<% include ./public/ad.html %>
+        <% include ./public/tag.html %>   
+        <% include ./public/hotpost_week.html %>   
+        <% include ./public/links.html %>
+    </div>
+
+</section>

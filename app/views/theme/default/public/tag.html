@@ -1,0 +1,18 @@
+
+<div class="block">
+  
+    <div class="widget about">
+      <strong class="wt">云标签</strong>
+      <div class="wc" style="overflow: visible;">
+          <div id="div1" style="overflow: hidden;">
+              
+                  <%tags.forEach(function(item){%>
+                     <a href="<%=site_url%>/tag/<%=item.title%>"  title="<%=item.title%>" ><%=item.title%></a>
+                  <%})%>
+              
+          </div>
+        <div class="sep10"></div>
+      </div>
+    </div>
+  </div>
+   <script src="<%=site_url%>/libs/miaov.js"></script>
